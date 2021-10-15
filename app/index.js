@@ -29,11 +29,9 @@ function videoFrameHandler(videoFrame, notifyVideoProcessed, notifyError) {
   source = new fabric.Color(colorSource).getSource(),
   destination = new fabric.Color(colorDestination).getSource();
   for (i = 0; i < len; i += 4) {
-    if (videoFrame.data[i] === source[0] && videoFrame.data[i + 1] === source[1] && videoFrame.data[i + 2] === source[2]) {
       videoFrame.data[i] = destination[0];
       videoFrame.data[i + 1] = destination[1];
       videoFrame.data[i + 2] = destination[2];
-    }
   }
 
   //send notification the effect processing is finshed.
