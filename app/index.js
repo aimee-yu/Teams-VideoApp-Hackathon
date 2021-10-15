@@ -8,6 +8,9 @@ let appliedEffect = {
   proportion: 3,
 };
 
+let colorSource = 'rgb(250,253,255)';
+let colorDestination = 'rgb(0, 255, 0)';
+
 // This is the effect linked with UI
 let uiSelectedEffect = {};
 
@@ -18,9 +21,19 @@ function videoFrameHandler(videoFrame, notifyVideoProcessed, notifyError) {
     (videoFrame.height * videoFrame.width) /
       Math.max(1, appliedEffect.proportion) - 4;
 
-  for (let i = 1; i < maxLen; i += 4) {
-    //smaple effect just change the value to 100, which effect some pixel value of video frame
-    videoFrame.data[i + 1] = appliedEffect.pixelValue;
+  // for (let i = 1; i < maxLen; i += 4) {
+  //   //smaple effect just change the value to 100, which effect some pixel value of video frame
+  //   videoFrame.data[i + 1] = appliedEffect.pixelValue;
+  // }
+
+  source = new fabric.Color(colorSource).getSource(),
+  destination = new fabric.Color(colorDestination).getSource();
+  for (i = 0; i < len; i += 4) {
+    if (videoFrame.data[i] === source[0] && videoFrame.data[i + 1] === source[1] && videoFrame.data[i + 2] === source[2]) {
+      videoFrame.data[i] = destination[0];
+      videoFrame.data[i + 1] = destination[1];
+      videoFrame.data[i + 2] = destination[2];
+    }
   }
 
   //send notification the effect processing is finshed.
