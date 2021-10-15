@@ -3,21 +3,21 @@
   "manifestVersion": "devPreview",
   "version": "1.0.0",
   "showLoadingIndicator": true,
-  "id": "b15f97b7-1f9b-4bb7-ac9f-efddf27aae7b",
+  "id": "dd4e2922-3257-4917-b26f-a012437d6206",
   "packageName": "com.microsoft.teams.videopp",
   "developer": {
     "name": "Hackathon-team",
-    "websiteUrl": "https://richa008.github.io/Teams-VideoApp-Hackathon",
-    "privacyUrl": "https://richa008.github.io/Teams-VideoApp-Hackathon",
-    "termsOfUseUrl": "https://richa008.github.io/Teams-VideoApp-Hackathon"
+    "websiteUrl": "https://aimee-yu.github.io/Teams-VideoApp-Hackathon/",
+    "privacyUrl": "https://aimee-yu.github.io/Teams-VideoApp-Hackathon/",
+    "termsOfUseUrl": "https://aimee-yu.github.io/Teams-VideoApp-Hackathon/"
   },
   "icons": {
     "color": "icon-color.png",
     "outline": "icon-outline.png"
   },
   "name": {
-    "short": "Teams VideoApp example",
-    "full": "Teams VideoApp example"
+    "short": "Filter example1",
+    "full": "Filter example1"
   },
   "description": {
     "short": "This repo demonstrate a minimal Teams video app.",
@@ -51,6 +51,6 @@
         "thumbnail": "half.png"
       }
     ],
-    "videoAppContentUrl": "https://richa008.github.io/Teams-VideoApp-Hackathon/app/index.html"
+    "videoAppContentUrl": "https://aimee-yu.github.io/Teams-VideoApp-Hackathon/app/index.html"
   }
 }
